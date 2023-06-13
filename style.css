@@ -1,0 +1,753 @@
+*{
+ width: 100%;
+ 
+  
+
+   
+
+
+/* ==================================================================Navbar Start-======================================================================== */
+#navbar{
+    background: #f9f9f9;
+}
+#logo{
+    font-size: 3vh;
+    font-weight: 550;
+    color: black;
+    text-shadow: 1.5px 1px 1px black;
+    margin-bottom: 5px;
+    
+}
+#logo span{
+    color: #ffa500;
+}
+.navbar-toggler span{
+    color: #ffa500;
+}
+.navbar-nav{
+    margin-left: 1vh;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background: #ffa500;
+    color: white;
+}
+#navbar form button{
+    background: orange;
+    color: white;
+    border: none;
+}
+/*========================================================================= Navbar End======================================================================= */
+
+
+
+/* ========================================================================Home start==================================================================================================== */
+
+
+.carousel-item {
+    width: 100%;
+    height: 100vh!important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .carousel-item::before {
+    content: '';
+    background-color: rgba(12, 11, 10, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .carousel-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 40%;
+    left: 0;
+    right: 0;
+  }
+  
+  
+  
+  .carousel-caption h5 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-weight: 700;
+    width: 70%;
+    margin: 400px auto px auto;
+  
+  }
+  
+  .carousel-caption p {
+    
+    font-size: 20px;
+    width: 70%;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    margin: 200px auto px auto;
+  }
+  
+  
+  @media(max-width:768px){
+    .carousel-caption h5 {
+      font-size: 38px;
+    }
+  }
+  @media(max-width:577px){
+    .carousel-caption h5 {
+      font-size: 25px;
+      
+    }
+    .carousel-caption p {
+      font-size: 13px;
+    }
+    
+  }
+/* =======================================================================Home end==================================================================================================== */
+
+
+/*====================================================================== about Start ===========================================================================*/
+.about .content {
+    padding: 10 80px;
+
+  }
+  
+  .about .content h3 {
+    font-weight: 400;
+    font-size: 34px;
+    color: #5f5950;
+  }
+  
+  .about .content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  
+  .about .content p {
+    font-size: 15px;
+    color: #ffa500;
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li + li {
+    margin-top: 15px;
+  }
+  
+  .about .content ul li {
+    position: relative;
+    padding-left: 26px;
+  }
+  
+  .about .content ul i {
+    font-size: 20px;
+    color: #ffb03b;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+  
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about .video-box {
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 400px;
+    position: relative;
+  }
+  
+  .about .play-btn {
+    width: 94px;
+    height: 94px;
+    background: radial-gradient(#ffb03b 50%, rgba(255, 176, 59, 0.4) 52%);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+    overflow: hidden;
+  }
+  
+  .about .play-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 100;
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+  .about .play-btn::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation: pulsate-btn 2s;
+    animation: pulsate-btn 2s;
+    -webkit-animation-direction: forwards;
+    animation-direction: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps;
+    animation-timing-function: steps;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 176, 59, 0.7);
+    top: -15%;
+    left: -15%;
+    background: rgba(198, 16, 0, 0);
+  }
+  
+  .about .play-btn:hover::after {
+    border-left: 15px solid #ffb03b;
+    transform: scale(20);
+  }
+  
+  .about .play-btn:hover::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-40%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+    z-index: 200;
+    -webkit-animation: none;
+    animation: none;
+    border-radius: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .about .content, .about .accordion-list {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .about .content {
+      padding-top: 30px;
+    }
+    .about .accordion-list {
+      padding-bottom: 30px;
+    }
+  }
+  
+  @-webkit-keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+
+/*================================================================== about end===============================================================================================*/
+
+
+
+
+
+/*================================================================ strand start===============================================================================================*/
+
+
+
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.pricing4 {
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  font-weight: 300;
+}
+
+.pricing4 h1,
+.pricing4 h2,
+.pricing4 h3,
+.pricing4 h4,
+.pricing4 h5,
+.pricing4 h6 {
+  color: #ffa500;
+}
+
+.pricing4 .font-weight-medium {
+  font-weight: 600;
+}
+
+.pricing4 .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.pricing4 .subtitle {
+  color: #000000;
+  line-height: 24px;
+}
+
+.pricing4 .font-14 {
+  font-size: 14px;
+}
+
+.pricing4 .font-13 {
+  font-size: 13px;
+}
+
+.pricing4 .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.pricing4 .text-success {
+  color: #ffa500 !important;
+}
+
+.pricing4 h5 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.pricing4 .btn-danger-gradiant {
+  background:#ffa500;
+  background: -webkit-linear-gradient(legacy-direction(to right), #ffa500 0%, #ffa500 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa500), to(#ffa500));
+  background: -webkit-linear-gradient(left, #ffa500 0%,#ffa500 100%);
+  background: -o-linear-gradient(left,#ffa500 0%, #ffa500 100%);
+  background: linear-gradient(to right, #ffa500 0%, #ffa500 100%);
+}
+
+ .pricing4 .btn-danger-gradiant:hover {
+  background: #000000;
+  background: -webkit-linear-gradient(legacy-direction(to right), #000000 0%, #000000 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#000000), to(#000000));
+  background: -webkit-linear-gradient(left, #000000 0%, #000000 100%);
+  background: -o-linear-gradient(left, #000000 0%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #000000 100%);
+}
+
+.pricing4 .btn-md {
+    padding: 10px 25px;
+    font-size: 16px;
+}
+/* ================================================================strand end========================================================================== */
+
+
+/* ================================================================Section start============================================================================= */
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
+.service-32 {
+  font-family: "Montserrat", sans-serif;
+	color: #ffa500;
+  font-weight: 300;
+}
+
+.service-32 h1, .service-32 h2, .service-32 h3, .service-32 h4, .service-32 h5, .service-32 h6 {
+  color: #000000;
+}
+
+.service-32 .font-weight-medium {
+	font-weight: 500;
+}
+
+.service-32 .badge {
+	line-height: 14px;
+}
+
+.service-32 .badge-info {
+	background:#ffa500;
+}
+
+
+
+
+
+
+.service-32 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+/*=============================================================================== Strand  end================================================================= */
+
+
+
+/* ===========================================================================start ======================================================================*/
+
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800);
+.blog-home3 {
+  font-family: "Montserrat", sans-serif;
+  color: #ffa500;
+  font-weight: 300;
+}
+
+.blog-home3 h1,
+.blog-home3 h2,
+.blog-home3 h3,
+.blog-home3 h4,
+.blog-home3 h5,
+.blog-home3 h6 {
+  color:#ffa500;
+}
+
+.blog-home3 h5 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.blog-home3 a.link {
+    color: #000000;
+}
+
+.blog-home3 a.link:hover {
+    color: #ffa500;
+}
+
+.blog-home3 .font-weight-medium {
+  font-weight: 500;
+}
+
+.blog-home3 .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.blog-home3 .subtitle {
+  color: #8d97ad;
+  line-height: 24px;
+}
+
+.blog-home3 .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.blog-home3 .on-hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.blog-home3 .on-hover:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.blog-home3 .bg-success-gradiant {
+  background: #ffa500;
+  background: -webkit-linear-gradient(legacy-direction(to right), #ffa500 0%, #ffa500 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa500), to(#ffa500));
+  background: -webkit-linear-gradient(left, #ffa500 0%, #ffa500 100%);
+  background: -o-linear-gradient(left, #ffa500 0%, #ffa500 100%);
+  background: linear-gradient(to right, #ffa500 0%, #ffa500 100%);
+}
+
+.blog-home3 .date-pos {
+  font-size: 12px;
+}
+
+.blog-home3 a {
+  overflow: hidden;
+}
+
+.blog-home3 a img {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.blog-home3 a img:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/*==========================================================end===============================================================================================*>
+
+
+
+
+
+/* ==========================================================================Section  Start ================================================================*/
+
+
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500,700);
+.banner8 {
+  font-family: "Montserrat", sans-serif;
+	color: #ffa500;
+  font-weight: 300;
+}
+
+.banner8 h1, .banner8 h2, .banner8 h3, .banner8 h4, .banner8 h5, .banner8 h6 {
+  color: #ffa500;
+}
+
+.banner8 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+}
+
+.banner8 a {
+  color: black;
+}
+
+.banner8 a:hover {
+  color:#ffa500;
+}
+
+.banner8 .blog-row h5 {
+  font-weight: 500;
+  margin-top: 10px;
+	font-size: 18px;
+}
+
+.banner8 .text-themecolor {
+    color: #ffa500;
+}
+
+.banner8 .btn-danger-gradiant {
+  background:#ffa500;
+  background: -webkit-linear-gradient(legacy-direction(to right), #ffa500 0%, #ffa500 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#ffa500), to(#ffa500));
+  background: -webkit-linear-gradient(left, #ffa500 0%, #ffa500 100%);
+  background: -o-linear-gradient(left, #ffa500 0%, #ffa500 100%);
+  background: linear-gradient(to right, #ffa500 0%, #ffa500 100%);
+}
+
+ .banner8 .btn-danger-gradiant:hover {
+  background: #000000;
+  background: -webkit-linear-gradient(legacy-direction(to right), #000000 0%,#000000 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#000000), to(#000000));
+  background: -webkit-linear-gradient(left, #000000 0%, #000000 100%);
+  background: -o-linear-gradient(left, #000000 0%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #000000 100%);
+}
+
+.banner8 .btn-md {
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+.banner8 .text-danger {
+    color: black !important;
+}
+
+/* ==========================================================================Section  Start end ================================================================*/
+
+
+ 
+
+/* ==========================================================================faq start ===========================================================================*/
+
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-decoration: underline 4px;
+}
+
+
+.questions-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question{
+    border-bottom: 1px solid #fff;
+}
+.question button{
+    width: 100%;
+    background-color: #ffa500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.question p{
+    font-size: 22px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #fff;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+
+/* ============================================================================ faq end ============================================================================*/
+
+
+
+
+
+/* =======================================================================CONTACT FORM================================================================================ */
+
+.book{
+    background: #f9f9f9;
+    padding: 50px;
+}
+.main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+}
+.main-text h1 span{
+    color: rgb(76, 56, 56);
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book .row{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    height: 200px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #ffa500;
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+/* ============================================================================Section COntact  End ===================================================================*/
+
+
+
+
+
+
+
+/* ==============================================================================Footer Start ===================================================*/
+
+#footer{
+ 
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  background: #f9f9f9;
+}
+#footer h1{
+  font-weight: 600;
+  padding-top: 30px;
+  text-shadow: 0px 0px 1px black;
+}
+#footer h1 span{
+  color: #ffa500;
+}
+.social-links i{
+  width: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #ffa500;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+ 
+}
+.social-links i:hover{
+  background: black;
+}
+/* =======================================================================Footer End============================================================================== */
+
+
+
+
+
+
+
+}
+
+
+
+
+
